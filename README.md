@@ -1,0 +1,2 @@
+# Covid-Campers
+A Leap test. STORY: The CIRCLE YOUR WAGONS campground has 20 service sites with hookups for visiting campers. Numbered 1 to 21 in a large circle around a pool. Site 10 and 11 are occupied full year by a double wide camp office trailer. Due to COVID, the administrators have decided to  leave an empty site between each rental. How many sites can they rent.  How many sites must remain empty. Possible Configurations of the Campers.  Oh, and the pool will be closed.
