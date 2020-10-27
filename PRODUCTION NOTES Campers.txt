@@ -1,0 +1,66 @@
+Hypothetical Example. Just to test out the workflow.
+These are my notes 
+
+STORY: The CIRCLE YOUR WAGONS campground has 20 service sites with hookups for visiting campers. Numbered 1 to 21 in a large circle around a pool. Site 10 and 11 are occupied full year by a double wide camp office trailer. Due to COVID, the admistrators have decided to  leave an empty site between each rental.
+How many sites can they rent. 
+How many sites must remain empty.
+Possible Configurations of the Campers.
+
+Oh, and the pool will be closed.
+
+How I solve this on my DWave Leap account:
+1,  Run my homemade Python Pairs generator, Circle,.           Make sure circle model
+Changed Line 1    PROJECT: Campers         the title
+Changed Line 10  Z = 21            node count
+Changed line 15 = 0          no offset, start at node 1
+Get: 
+[(1, 2 ),(2, 3 ),(3, 4 ),(4, 5 ),(5, 6 ),(6, 7 ),(7, 8 ),(8, 9 ),(9, 10 ),(10, 11 ),(11, 12 ),(12, 13 ),(13, 14 ),(14, 15 ),(15, 16 ),(16, 17 ),(17, 18 ),(18, 19 ),(19, 20 ),(20, 21 ),(21, 1 )]
+This is a full circle.
+
+Need to remove 10 and 11 . Add pairs (10,10) and (11,11)   this is a test.
+
+Result to Paste
+[(1, 2 ),(2, 3 ),(3, 4 ),(4, 5 ),(5, 6 ),(6, 7 ),(7, 8 ),(8, 9 ),(9, 10 ),(10, 11 ),(11, 12 ),(12, 13 ),(13, 14 ),(14, 15 ),(15, 16 ),(16, 17 ),(17, 18 ),(18, 19 ),(19, 20 ),(20, 21 ),(21, 1 ), (10,10), (11,11)  ]
+
+watch all thepair interior commas and commas between pairs and messy end bracket combos
+you past that block into statement at line 40 in the RUNNER File
+G.add_edges_from        -------HERE
+
+Line 20  Change title
+Lne  40 pasted Results
+Line 50 Fiddle with printout requirements as needed
+SAVE under unique name in your project folder
+---------------------------------------------------------to run
+Log into leap.
+Check dashboard and note time status  3.24%
+
+open ideWorkspaces
+Since I can't PASTE to a workspace all the pairs - I do not want to type
+Open my Github 
+Create new Repo
+Upload files. These files include my pairs pasted.
+Add Leap prexit to html address at Github to open  Repo in Git 
+ala
+Prefix the URL in the address bar of your browser with: htZZtps://ide.dwavesys.io/#
+
+Like magic, it opens in the ide in leap
+Click on the CampersRunner.pyfile name in the left colum
+opens py file
+Name red  proble
+Name yellow small problem
+***  Save Workspace as -  Campers
+Hit green triangle on right to run
+---------------------------------
+TypeError: 'method' object is not subscriptable
+I blew the brackets needs to be ([(        . .     )])  
+-------------------------------------
+forgot I don't want campers adjacent to office either, thats 2 more constraint pairs
+office is at 10 and 11 so add ( 9,9 )  and (12,12)
+--------------------------------------------------
+Worked
+For bonus points ! took site 2 out of seviice, a racoon got into the electrics, what a stink - 
+And reran.
+
+
+
+
